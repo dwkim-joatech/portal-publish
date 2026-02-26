@@ -97,9 +97,9 @@ $layout = str_replace('</head>', $productionHead . "\n</head>", $layout);
 // Page name → output path mapping
 $pages = [
     'main'          => 'index.html',
-    'sub-test'      => 'sub-test/index.html',
-    'junggo-list'   => 'junggo-list/index.html',
-    'junggo-detail' => 'junggo-detail/index.html',
+    'sub-test'      => 'sub-test.html',
+    'junggo-list'   => 'junggo-list.html',
+    'junggo-detail' => 'junggo-detail.html',
 ];
 
 foreach ($pages as $pageName => $outputPath) {

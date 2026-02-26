@@ -35,7 +35,7 @@
   <div class="w-full bg-white">
     <div class="flex items-center justify-between pt-[40px] pb-[10px] px-[20px]">
       <h2 class="text-[18px] font-semibold text-black">조아테크 서비스</h2>
-      <div class="flex items-center cursor-pointer" href="/junggo-list" role="link" tabindex="0" onclick="window.location.href='/junggo-list'" onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='/junggo-list';}">
+      <div class="flex items-center cursor-pointer" href="junggo-list" role="link" tabindex="0" onclick="window.location.href='/junggo-list'" onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='/junggo-list';}">
         <span class="text-[13px] text-[#999]">더보기</span>
         <img src="{{ asset('images/keyboardArrowRight.svg') }}" alt="" class="w-[16px] h-[16px]" />
       </div>

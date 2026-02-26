@@ -87,7 +87,7 @@
 
     <!-- 네비게이션 리스트 (흰 배경) -->
     <div class="flex flex-col gap-[20px] justify-start p-[20px] overflow-y-auto flex-1">
-      <a href="/junggo-list" class="flex gap-[10px] items-center w-full">
+      <a href="junggo-list" class="flex gap-[10px] items-center w-full">
         <div class="relative shrink-0 size-[24px]"><img data-menu="junggo" alt="" class="block max-w-none size-full" src="{{ asset('images/shoppingBasket.svg') }}" data-src-default="{{ asset('images/shoppingBasket.svg') }}" data-src-selected="{{ asset('images/shoppingBasket_selected.svg') }}" /></div>
         <p data-menu-label="junggo" class="flex-1 font-normal leading-[24px] text-[14px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">중고장터</p>
         <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/keyboardArrowRight24.svg') }}" /></div>

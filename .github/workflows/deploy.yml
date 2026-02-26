@@ -29,8 +29,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
+      - name: Build CSS/JS assets
+        run: npx vite build --base=/portal-publish/
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Render Blade templates to static HTML
+        run: php build_static.php
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

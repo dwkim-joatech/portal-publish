@@ -35,7 +35,7 @@
   <div class="w-full bg-white">
     <div class="flex items-center justify-between pt-[40px] pb-[10px] px-[20px]">
       <h2 class="text-[18px] font-semibold text-black">조아테크 서비스</h2>
-      <div class="flex items-center cursor-pointer" href="junggo-list" role="link" tabindex="0" onclick="window.location.href='junggo-list'" onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='junggo-list';}">
+      <div class="flex items-center cursor-pointer" href="junggo-list" role="link" tabindex="0" onclick="window.location.href='{{ asset('junggo-list') }}'" onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='{{ asset('junggo-list') }}';}">
         <span class="text-[13px] text-[#999]">더보기</span>
         <img src="{{ asset('images/keyboardArrowRight.svg') }}" alt="" class="w-[16px] h-[16px]" />
       </div>
@@ -55,7 +55,7 @@
             <span class="px-[6px] h-[18px] text-[11px] leading-[18px] border border-[rgba(32,116,226,0.6)] text-[#2074e2] rounded-full flex items-center justify-center">판매글</span>
             <span class="px-[6px] h-[18px] text-[11px] leading-[18px] bg-[rgba(32,116,226,0.15)] text-[#2074e2] rounded-full flex items-center justify-center">거래중</span>
           </div>
-          <p class="text-[14px] font-semibold text-black leading-normal">[탱크/용기] 250,200Kg 소형저장탱크 할부판매 합니다.</p>
+          <p class="text-[14px] font-semibold text-black leading-normal" onclick="window.location.href='{{ asset('junggo-detail') }}'">[탱크/용기] 250,200Kg 소형저장탱크 할부판매 합니다.</p>
           <div class="flex items-center gap-[6px] text-[12px] text-[#999]">
             <span>서울</span>
             <span>0105259****</span>
@@ -75,7 +75,7 @@
             <span class="px-[6px] h-[18px] text-[11px] leading-[18px] border border-[rgba(57,189,40,0.6)] text-[#39bd28] rounded-full flex items-center justify-center">구매글</span>
             <span class="px-[6px] h-[18px] text-[11px] leading-[18px] bg-[rgba(102,102,102,0.15)] text-[#666] rounded-full flex items-center justify-center">거래완료</span>
           </div>
-          <p class="text-[14px] font-semibold text-black leading-normal">[탱크/용기] 200KG 탱크 구합니다.</p>
+          <p class="text-[14px] font-semibold text-black leading-normal" onclick="window.location.href='{{ asset('junggo-detail') }}'">[탱크/용기] 200KG 탱크 구합니다.</p>
           <div class="flex items-center gap-[6px] text-[12px] text-[#999]">
             <span>서울</span>
             <span>0105259****</span>

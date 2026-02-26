@@ -21,7 +21,7 @@
 <div class="px-[20px]">
 
   {{-- 아이템 1: 판매글 + 거래중 --}}
-  <a href="junggo-detail" class="flex gap-[10px] py-[20px] border-b border-[#eee]">
+  <a href="{{ asset('junggo-detail') }}" class="flex gap-[10px] py-[20px] border-b border-[#eee]">
     <div class="relative w-[80px] h-[80px] bg-[#eee] flex-shrink-0 overflow-hidden">
       <img src="{{ asset('images/image32.png') }}" alt="" class="absolute w-full h-full object-cover" />
     </div>
@@ -42,7 +42,7 @@
   </a>
 
   {{-- 아이템 2: 구매글 + 거래완료 --}}
-  <a href="junggo-detail" class="flex gap-[10px] py-[20px] border-b border-[#eee]">
+  <a href="{{ asset('junggo-detail') }}" class="flex gap-[10px] py-[20px] border-b border-[#eee]">
     <div class="relative w-[80px] h-[80px] bg-[#eee] flex-shrink-0 overflow-hidden">
       <img src="{{ asset('images/image34.png') }}" alt="" class="absolute w-full h-full object-cover" />
     </div>
@@ -63,7 +63,7 @@
   </a>
 
   {{-- 아이템 3: 판매글 + 거래중 --}}
-  <a href="junggo-detail" class="flex gap-[10px] py-[20px] border-b border-[#eee]">
+  <a href="{{ asset('junggo-detail') }}" class="flex gap-[10px] py-[20px] border-b border-[#eee]">
     <div class="relative w-[80px] h-[80px] bg-[#eee] flex-shrink-0 overflow-hidden">
       <img src="{{ asset('images/image26.png') }}" alt="" class="absolute w-full h-full object-cover" />
     </div>
@@ -84,7 +84,7 @@
   </a>
 
   {{-- 아이템 4: 구매글 + 거래완료 (이미지 없음) --}}
-  <a href="'{{ asset('junggo-detail') }}'" class="flex gap-[10px] py-[20px] border-b border-[#eee]">
+  <a href="{{ asset('junggo-detail') }}" class="flex gap-[10px] py-[20px] border-b border-[#eee]">
     <div class="relative w-[80px] h-[80px] bg-[#eee] flex-shrink-0 overflow-hidden flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ccc"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
     </div>
@@ -105,7 +105,7 @@
   </a>
 
   {{-- 아이템 5: 구매글 + 거래완료 --}}
-  <a href="'{{ asset('junggo-detail') }}'" class="flex gap-[10px] py-[20px] border-b border-[#eee]">
+  <a href="{{ asset('junggo-detail') }}" class="flex gap-[10px] py-[20px] border-b border-[#eee]">
     <div class="relative w-[80px] h-[80px] bg-[#eee] flex-shrink-0 overflow-hidden">
       <img src="{{ asset('images/image28.png') }}" alt="" class="absolute w-full h-full object-cover" />
     </div>

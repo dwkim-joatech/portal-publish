@@ -12,6 +12,9 @@ function asset($path) {
 }
 
 function renderBlade($content) {
+    // 0. Strip Blade comments {{-- ... --}}
+    $content = preg_replace('/\{\{--.*?--\}\}/s', '', $content);
+
     // 1. Parse {{ asset('...') }} helper
     $content = preg_replace_callback('/\{\{\s*asset\([\'"](.*?)[\'"]\)\s*\}\}/', function($matches) {
         return asset($matches[1]);
@@ -93,8 +96,10 @@ $layout = str_replace('</head>', $productionHead . "\n</head>", $layout);
 
 // Page name → output path mapping
 $pages = [
-    'main'     => 'index.html',
-    'sub-test' => 'sub-test/index.html',
+    'main'          => 'index.html',
+    'sub-test'      => 'sub-test/index.html',
+    'junggo-list'   => 'junggo-list/index.html',
+    'junggo-detail' => 'junggo-detail/index.html',
 ];
 
 foreach ($pages as $pageName => $outputPath) {

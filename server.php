@@ -30,6 +30,9 @@ function asset($path) {
 
 // Function to recursively render a blade component
 function renderBlade($content) {
+    // 0. Strip Blade comments {{-- ... --}}
+    $content = preg_replace('/\{\{--.*?--\}\}/s', '', $content);
+
     // 1. Parse asset() helper
     $content = preg_replace_callback('/\{\{\s*asset\([\'"](.*?)[\'"]\)\s*\}\}/', function($matches) {
         return asset($matches[1]);

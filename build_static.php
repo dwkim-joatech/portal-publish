@@ -100,6 +100,7 @@ $pages = [
     'sub-test'      => 'sub-test.html',
     'junggo-list'   => 'junggo-list.html',
     'junggo-detail' => 'junggo-detail.html',
+    'junggo-write'  => 'junggo-write.html',
 ];
 
 foreach ($pages as $pageName => $outputPath) {

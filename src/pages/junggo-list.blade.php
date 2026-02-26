@@ -1,7 +1,7 @@
 {{-- 중고장터 목록 --}}
 
 {{-- GNB --}}
-<x-gnb-sub title="중고장터" />
+<x-gnb-sub title="조아테크 서비스" />
 
 {{-- 메뉴 탭 --}}
 <x-menu-tab />

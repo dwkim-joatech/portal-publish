@@ -87,9 +87,9 @@
 
     <!-- 네비게이션 리스트 (흰 배경) -->
     <div class="flex flex-col gap-[20px] justify-start p-[20px] overflow-y-auto flex-1">
-      <a href="#" class="flex gap-[10px] items-center w-full">
-        <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/shoppingBasket.svg') }}" /></div>
-        <p class="flex-1 font-normal leading-[24px] text-[14px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">중고장터</p>
+      <a href="/junggo-list" class="flex gap-[10px] items-center w-full">
+        <div class="relative shrink-0 size-[24px]"><img data-menu="junggo" alt="" class="block max-w-none size-full" src="{{ asset('images/shoppingBasket.svg') }}" data-src-default="{{ asset('images/shoppingBasket.svg') }}" data-src-selected="{{ asset('images/shoppingBasket_selected.svg') }}" /></div>
+        <p data-menu-label="junggo" class="flex-1 font-normal leading-[24px] text-[14px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">중고장터</p>
         <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/keyboardArrowRight24.svg') }}" /></div>
       </a>
       <a href="#" class="flex gap-[10px] items-center w-full">
@@ -153,7 +153,7 @@
     const overlay  = document.getElementById('side-menu-overlay');
     const drawer   = document.getElementById('side-menu-drawer');
     const closeBtn = document.getElementById('side-menu-close');
-    const menuBtn  = document.querySelector('[data-name="gnb/main"] [alt="메뉴"]');
+    const menuImgs = document.querySelectorAll('[data-name="gnb/main"] [alt="메뉴"], [data-name="gnb/sub"] [alt="메뉴"]');
     let closeTimeout;
 
     function openMenu() {
@@ -180,8 +180,20 @@
       }, 300);
     }
 
-    if (menuBtn)  menuBtn.closest('div').addEventListener('click', openMenu);
+    menuImgs.forEach((img) => {
+      const trigger = img.closest('button') || img.closest('div');
+      if (trigger) trigger.addEventListener('click', openMenu);
+    });
     if (overlay)  overlay.addEventListener('click', closeMenu);
     if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+    const path = window.location.pathname || '';
+    const isJunggoSelected = path.includes('junggo-list') || path.includes('junggo-detail');
+    if (isJunggoSelected) {
+      const junggoIcon = document.querySelector('img[data-menu="junggo"]');
+      const junggoLabel = document.querySelector('[data-menu-label="junggo"]');
+      if (junggoIcon && junggoIcon.dataset.srcSelected) junggoIcon.src = junggoIcon.dataset.srcSelected;
+      if (junggoLabel) junggoLabel.style.color = '#2074E2';
+    }
   })();
 </script>

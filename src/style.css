@@ -123,7 +123,7 @@
 
   /* 투자분석 탭 버튼 */
   .invest-tab {
-    @apply h-[44px] px-[4px] text-[14px] text-gray-text;
+    @apply h-[44px] px-[4px] text-[14px] text-gray-text inline-flex items-center;
   }
 
   .invest-tab-active {

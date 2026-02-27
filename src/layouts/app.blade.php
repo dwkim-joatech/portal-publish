@@ -9,7 +9,17 @@
     <script type="module" src="http://localhost:3000/src/main.js"></script>
 </head>
 <body class="p-0 sm:p-4 bg-[#f3f4f6]">
-    <div class="w-full mx-auto bg-white relative min-h-screen pb-[60px]" data-name="app-layout">
+    <!-- 페이지 로딩 오버레이 -->
+    <div class="page-loading-overlay" id="pageLoading">
+        <div class="bg-white rounded-lg px-6 py-4 shadow-lg">
+            <div class="flex items-center space-x-3">
+                <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+                <span class="text-gray-600">로딩 중...</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full mx-auto bg-white relative min-h-screen pb-[60px] page-transition" data-name="app-layout">
 
         <!-- 개별 페이지 컨텐츠가 주입되는 영역 -->
         {!! $slot !!}

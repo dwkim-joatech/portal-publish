@@ -290,6 +290,34 @@
         </button>
       </div>
     </div>
+    <div class="list-grid-3col">
+      <div class="list-grid-td text-center">1</div>
+      <div class="list-grid-td text-center">24개월</div>
+      <div class="list-grid-td flex items-center justify-center">
+        <button class="text-gray-dark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="list-grid-3col">
+      <div class="list-grid-td text-center">1</div>
+      <div class="list-grid-td text-center">24개월</div>
+      <div class="list-grid-td flex items-center justify-center">
+        <button class="text-gray-dark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="list-grid-3col">
+      <div class="list-grid-td text-center">1</div>
+      <div class="list-grid-td text-center">24개월</div>
+      <div class="list-grid-td flex items-center justify-center">
+        <button class="text-gray-dark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+    </div>
+    
   </div>
 
 </div>

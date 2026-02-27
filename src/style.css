@@ -67,7 +67,7 @@
   }
 
   .btn-pill {
-    @apply h-[32px] px-[14px] rounded-full border border-gray-border bg-white text-[13px] text-black;
+    @apply h-[32px] px-[14px] rounded-full border border-gray-border bg-white text-[13px] text-black flex items-center;
   }
 
   .btn-icon {

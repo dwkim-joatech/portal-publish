@@ -8,7 +8,7 @@
     <script type="module" src="http://localhost:3000/@vite/client"></script>
     <script type="module" src="http://localhost:3000/src/main.js"></script>
 </head>
-<body class="p-0 sm:p-4 bg-[#f3f4f6]">
+<body class="p-0 bg-white overflow-x-hidden">
     <!-- 페이지 로딩 오버레이 -->
     <div class="page-loading-overlay" id="pageLoading">
         <div class="bg-white rounded-lg px-6 py-4 shadow-lg">
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <div class="w-full mx-auto bg-white relative min-h-screen pb-[60px] page-transition" data-name="app-layout">
+    <div class="w-full bg-white relative pb-[60px] page-transition" data-name="app-layout">
 
         <!-- 개별 페이지 컨텐츠가 주입되는 영역 -->
         {!! $slot !!}

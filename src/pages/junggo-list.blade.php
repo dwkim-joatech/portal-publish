@@ -18,7 +18,7 @@
 </div>
 
 {{-- 필터 팝업 --}}
-<div id="filter-overlay" class="fixed inset-0 bg-black/50 z-[100] hidden" style="max-width: 360px; margin: 0 auto;">
+<div id="filter-overlay" class="fixed inset-0 bg-black/50 z-[100] hidden">
   <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-[16px]">
 
     {{-- 팝업 헤더 --}}

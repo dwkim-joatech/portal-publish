@@ -12,7 +12,7 @@
     <button class="relative shrink-0 size-[24px]">
       <img alt="장바구니" class="block size-full" src="{{ asset('images/shoppingBag.svg') }}" />
     </button>
-    <button class="relative shrink-0 size-[24px]">
+    <button class="relative shrink-0 size-[24px]" onclick="openSideMenu()">
       <img alt="메뉴" class="block size-full" src="{{ asset('images/menu_sub.svg') }}" />
     </button>
   </div>
@@ -172,7 +172,7 @@
   </a>
 
   {{-- 아이템 3 --}}
-  <a href="#" class="flex gap-[12px] py-[16px] border-b border-[#eee]">
+  <a href="/shoppingmall-detail" class="flex gap-[12px] py-[16px] border-b border-[#eee]">
     <div class="relative w-[80px] h-[80px] bg-[#f5f5f5] flex-shrink-0 overflow-hidden flex items-center justify-center">
       <img src="{{ asset('images/image33.png') }}" alt="" class="absolute w-full h-full object-contain p-[4px]" />
     </div>
@@ -216,3 +216,21 @@
   </a>
 
 </div>
+
+<script>
+  function openSideMenu() {
+    const sideMenu = document.getElementById('side-menu');
+    const overlay  = document.getElementById('side-menu-overlay');
+    const drawer   = document.getElementById('side-menu-drawer');
+    
+    if (sideMenu && overlay && drawer) {
+      sideMenu.classList.remove('invisible');
+      void sideMenu.offsetWidth;
+      overlay.classList.remove('opacity-0');
+      overlay.classList.add('opacity-100');
+      drawer.classList.remove('translate-x-full');
+      drawer.classList.add('translate-x-0');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+</script>

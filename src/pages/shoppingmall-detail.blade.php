@@ -50,31 +50,16 @@
     <option value="24kg">24KG (1020) [+240000원]</option>
   </select>
 
-  {{-- 선택된 옵션 행 --}}
-  <div class="border border-[#ddd] px-[12px] py-[10px] flex flex-col gap-[10px] hidden" id="selected-option">
-    <div class="flex items-center justify-between">
-      <span class="text-[13px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">8KG (280) [+80000원]</span>
-      <button class="size-[18px] flex items-center justify-center text-[#999]" id="remove-option">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M13 1L1 13" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </button>
-    </div>
-    <div class="flex items-center justify-between">
-      {{-- 수량 조절 --}}
-      <div class="flex items-center border border-[#ddd] h-[36px]">
-        <button class="w-[36px] h-full flex items-center justify-center text-[18px] text-black leading-none" id="qty-minus">−</button>
-        <span class="w-[36px] h-full flex items-center justify-center text-[14px] text-black" style="font-family: 'Inter', sans-serif;" id="qty-display">1</span>
-        <button class="w-[36px] h-full flex items-center justify-center text-[18px] text-black leading-none" id="qty-plus">+</button>
-      </div>
-      {{-- 소계 --}}
-      <span class="text-[14px] font-semibold text-black" style="font-family: 'Inter', sans-serif;" id="line-total">80,000 원</span>
-    </div>
+  {{-- 선택된 옵션들 컨테이너 --}}
+  <div id="selected-options-container" class="flex flex-col gap-[12px]">
+    <!-- 동적으로 선택된 옵션 박스들이 여기에 추가됩니다 -->
   </div>
 
 </div>
 
 {{-- 합계 --}}
 <div class="px-[20px] pt-[16px] flex justify-end">
-  <span class="text-[20px] font-bold text-black" style="font-family: 'Inter', sans-serif;" id="grand-total">80,000 원</span>
+  <span class="text-[20px] font-bold text-black" style="font-family: 'Inter', sans-serif;" id="grand-total">0 원</span>
 </div>
 
 {{-- 구매 버튼 --}}
@@ -104,8 +89,8 @@
 
 <script>
   (function () {
-    var unitPrice = 80000;
-    var qty = 1;
+    var selectedOptions = {}; // 선택된 옵션들 저장
+    var optionCounter = 0; // 옵션 ID 생성용 카운터
 
     // 이미지 슬라이더 변수
     var images = [
@@ -119,11 +104,66 @@
       return n.toLocaleString('ko-KR') + ' 원';
     }
 
-    function updateTotals() {
-      document.getElementById('qty-display').textContent = qty;
-      document.getElementById('line-total').textContent = fmt(unitPrice * qty);
-      document.getElementById('grand-total').textContent = fmt(unitPrice * qty);
+    function updateGrandTotal() {
+      var grandTotal = 0;
+      for (var optionId in selectedOptions) {
+        var option = selectedOptions[optionId];
+        grandTotal += option.price * option.qty;
+      }
+      document.getElementById('grand-total').textContent = fmt(grandTotal);
     }
+
+    function createOptionBox(optionValue, optionText, price) {
+      var optionId = 'option-' + (++optionCounter);
+      selectedOptions[optionId] = {
+        value: optionValue,
+        text: optionText,
+        price: price,
+        qty: 1
+      };
+
+      var optionBox = document.createElement('div');
+      optionBox.className = 'border border-[#ddd] px-[12px] py-[10px] flex flex-col gap-[10px]';
+      optionBox.id = optionId;
+
+      optionBox.innerHTML = `
+        <div class="flex items-center justify-between">
+          <span class="text-[13px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">${optionText}</span>
+          <button class="size-[18px] flex items-center justify-center text-[#999]" onclick="removeOption('${optionId}')">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M13 1L1 13" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center border border-[#ddd] h-[36px]">
+            <button class="w-[36px] h-full flex items-center justify-center text-[18px] text-black leading-none" onclick="updateQty('${optionId}', -1)">−</button>
+            <span class="w-[36px] h-full flex items-center justify-center text-[14px] text-black" style="font-family: 'Inter', sans-serif;" id="qty-${optionId}">1</span>
+            <button class="w-[36px] h-full flex items-center justify-center text-[18px] text-black leading-none" onclick="updateQty('${optionId}', 1)">+</button>
+          </div>
+          <span class="text-[14px] font-semibold text-black" style="font-family: 'Inter', sans-serif;" id="total-${optionId}">${fmt(price)}</span>
+        </div>
+      `;
+
+      return optionBox;
+    }
+
+    window.removeOption = function(optionId) {
+      delete selectedOptions[optionId];
+      var element = document.getElementById(optionId);
+      if (element) {
+        element.remove();
+      }
+      updateGrandTotal();
+    };
+
+    window.updateQty = function(optionId, change) {
+      var option = selectedOptions[optionId];
+      if (option) {
+        option.qty = Math.max(1, option.qty + change);
+        document.getElementById('qty-' + optionId).textContent = option.qty;
+        document.getElementById('total-' + optionId).textContent = fmt(option.price * option.qty);
+        updateGrandTotal();
+      }
+    };
 
     // 이미지 업데이트 함수
     function updateImage() {
@@ -142,19 +182,6 @@
       updateImage();
     }
 
-    document.getElementById('qty-minus').addEventListener('click', function () {
-      if (qty > 1) { qty--; updateTotals(); }
-    });
-    document.getElementById('qty-plus').addEventListener('click', function () {
-      qty++; updateTotals();
-    });
-
-    document.getElementById('remove-option').addEventListener('click', function () {
-      document.getElementById('selected-option').classList.add('hidden');
-      document.querySelector('select').value = '';
-      document.getElementById('grand-total').textContent = '0 원';
-    });
-
     // 이미지 슬라이더 이벤트 리스너
     document.getElementById('img-prev').addEventListener('click', prevImage);
     document.getElementById('img-next').addEventListener('click', nextImage);
@@ -166,15 +193,23 @@
         var priceMatch = selectedText.match(/\[+([0-9,]+)원\]/);
         var price = priceMatch ? parseInt(priceMatch[1].replace(/,/g, '')) : 80000;
         
-        unitPrice = price;
-        qty = 1;
-        
-        // 선택된 옵션 텍스트 업데이트
-        document.querySelector('#selected-option span').textContent = selectedText;
-        
-        // 선택된 옵션 영역 표시 및 가격 업데이트
-        document.getElementById('selected-option').classList.remove('hidden');
-        updateTotals();
+        // 이미 선택된 옵션인지 확인
+        var alreadySelected = false;
+        for (var optionId in selectedOptions) {
+          if (selectedOptions[optionId].value === this.value) {
+            alreadySelected = true;
+            break;
+          }
+        }
+
+        if (!alreadySelected) {
+          var optionBox = createOptionBox(this.value, selectedText, price);
+          document.getElementById('selected-options-container').appendChild(optionBox);
+          updateGrandTotal();
+        }
+
+        // 드롭다운 초기화
+        this.value = '';
       }
     });
   })();

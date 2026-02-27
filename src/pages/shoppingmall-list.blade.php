@@ -155,7 +155,7 @@
       <img src="{{ asset('images/image27.png') }}" alt="" class="absolute w-full h-full object-contain p-[4px]" />
     </div>
     <div class="flex-1 flex flex-col justify-center gap-[6px]">
-      <p class="text-[14px] text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">IoT 원격검침기(탱크)</p>
+      <p class="text-[14px] font-semibold text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">IoT 원격검침기(탱크)</p>
       <p class="text-[16px] font-bold text-black" style="font-family: 'Inter', sans-serif;">0 원</p>
     </div>
   </a>
@@ -166,7 +166,7 @@
       <img src="{{ asset('images/image30.png') }}" alt="" class="absolute w-full h-full object-contain p-[4px]" />
     </div>
     <div class="flex-1 flex flex-col justify-center gap-[6px]">
-      <p class="text-[14px] text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">액면지시계 JOA-300</p>
+      <p class="text-[14px] font-semibold text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">액면지시계 JOA-300</p>
       <p class="text-[16px] font-bold text-black" style="font-family: 'Inter', sans-serif;">20,000 원</p>
     </div>
   </a>
@@ -177,7 +177,7 @@
       <img src="{{ asset('images/image33.png') }}" alt="" class="absolute w-full h-full object-contain p-[4px]" />
     </div>
     <div class="flex-1 flex flex-col justify-center gap-[6px]">
-      <p class="text-[14px] text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">휴콘스 압력조정기 8kg (2단 감압식 일체형)</p>
+      <p class="text-[14px] font-semibold text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">휴콘스 압력조정기 8kg (2단 감압식 일체형)</p>
       <p class="text-[16px] font-bold text-black" style="font-family: 'Inter', sans-serif;">80,000 원</p>
     </div>
   </a>
@@ -188,7 +188,7 @@
       <img src="{{ asset('images/image35.png') }}" alt="" class="absolute w-full h-full object-contain p-[4px]" />
     </div>
     <div class="flex-1 flex flex-col justify-center gap-[6px]">
-      <p class="text-[14px] text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">린나이 콘덴싱1종보일러 RC620</p>
+      <p class="text-[14px] font-semibold text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">린나이 콘덴싱1종보일러 RC620</p>
       <p class="text-[16px] font-bold text-black" style="font-family: 'Inter', sans-serif;">510,000 원</p>
     </div>
   </a>
@@ -199,7 +199,7 @@
       <img src="{{ asset('images/image29.png') }}" alt="" class="absolute w-full h-full object-contain p-[4px]" />
     </div>
     <div class="flex-1 flex flex-col justify-center gap-[6px]">
-      <p class="text-[14px] text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">가스 자동절체기 (100kg용)</p>
+      <p class="text-[14px] font-semibold text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">가스 자동절체기 (100kg용)</p>
       <p class="text-[16px] font-bold text-black" style="font-family: 'Inter', sans-serif;">150,000 원</p>
     </div>
   </a>
@@ -210,27 +210,10 @@
       <img src="{{ asset('images/image31.png') }}" alt="" class="absolute w-full h-full object-contain p-[4px]" />
     </div>
     <div class="flex-1 flex flex-col justify-center gap-[6px]">
-      <p class="text-[14px] text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">LPG 용기 밸브 (20kg)</p>
+      <p class="text-[14px] font-semibold text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">LPG 용기 밸브 (20kg)</p>
       <p class="text-[16px] font-bold text-black" style="font-family: 'Inter', sans-serif;">35,000 원</p>
     </div>
   </a>
 
 </div>
 
-<script>
-  function openSideMenu() {
-    const sideMenu = document.getElementById('side-menu');
-    const overlay  = document.getElementById('side-menu-overlay');
-    const drawer   = document.getElementById('side-menu-drawer');
-    
-    if (sideMenu && overlay && drawer) {
-      sideMenu.classList.remove('invisible');
-      void sideMenu.offsetWidth;
-      overlay.classList.remove('opacity-0');
-      overlay.classList.add('opacity-100');
-      drawer.classList.remove('translate-x-full');
-      drawer.classList.add('translate-x-0');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-</script>

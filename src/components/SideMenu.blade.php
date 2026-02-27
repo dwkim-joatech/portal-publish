@@ -187,6 +187,10 @@
     if (overlay)  overlay.addEventListener('click', closeMenu);
     if (closeBtn) closeBtn.addEventListener('click', closeMenu);
 
+    // 전역 함수로 노출
+    window.openSideMenu = openMenu;
+    window.closeSideMenu = closeMenu;
+
     const path = window.location.pathname || '';
     const isJunggoSelected = path.includes('junggo-list') || path.includes('junggo-detail');
     if (isJunggoSelected) {

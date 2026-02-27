@@ -6,7 +6,7 @@
     <button class="relative shrink-0 size-[28px] flex items-center justify-center" onclick="history.back()">
       <img alt="뒤로가기" class="block size-full" src="{{ asset('images/keyboardArrowRight.svg') }}" style="transform: scaleX(-1)" />
     </button>
-    <p class="font-semibold leading-normal text-[22px] text-black truncate" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">투자예상분석</p>
+    <p class="title-page truncate">투자예상분석</p>
   </div>
   <button class="relative shrink-0 size-[24px]">
     <img alt="메뉴" class="block size-full" src="{{ asset('images/menu_sub.svg') }}" />
@@ -15,9 +15,9 @@
 
 {{-- 탭 --}}
 <div class="bg-white border-b border-[#ddd] flex px-[20px]">
-  <button class="h-[44px] px-[4px] mr-[20px] text-[14px] font-semibold text-black border-b-[2px] border-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" data-invest-tab data-target="tab-register">등록</button>
-  <button class="h-[44px] px-[4px] mr-[20px] text-[14px] text-[#999]" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" data-invest-tab data-target="tab-result">결과</button>
-  <button class="h-[44px] px-[4px] text-[14px] text-[#999]" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" data-invest-tab data-target="tab-list">결과목록</button>
+  <button class="h-[44px] px-[4px] mr-[20px] text-[14px] font-semibold text-black border-b-[2px] border-black" data-invest-tab data-target="tab-register">등록</button>
+  <button class="h-[44px] px-[4px] mr-[20px] text-[14px] text-gray-text" data-invest-tab data-target="tab-result">결과</button>
+  <button class="h-[44px] px-[4px] text-[14px] text-gray-text" data-invest-tab data-target="tab-list">결과목록</button>
 </div>
 
 {{-- 탭 콘텐츠: 등록 --}}
@@ -25,7 +25,7 @@
 
   {{-- 기본정보 입력 --}}
   <div class="flex flex-col gap-[16px]">
-    <h2 class="text-[15px] font-bold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">기본정보 입력</h2>
+    <h2 class="title-section text-[15px]">기본정보 입력</h2>
 
     {{-- 수요처 --}}
     <div class="flex flex-col gap-[6px]">
@@ -33,8 +33,8 @@
         <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">수요처</label>
         <span class="inline-block w-[5px] h-[5px] rounded-full bg-[#e53e3e] flex-shrink-0"></span>
       </div>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-white">
-        <input type="text" placeholder="수요처 입력" class="w-full text-[14px] text-black outline-none bg-transparent placeholder-[#bbb]" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" id="inp-demand" />
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-white">
+        <input type="text" placeholder="수요처 입력" class="w-full text-[14px] text-black outline-none bg-transparent placeholder-gray-text" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" id="inp-demand" />
       </div>
     </div>
 
@@ -44,8 +44,8 @@
         <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">계약기간</label>
         <span class="inline-block w-[5px] h-[5px] rounded-full bg-[#e53e3e] flex-shrink-0"></span>
       </div>
-      <div class="relative border border-[#ddd] h-[44px] flex items-center px-[12px] bg-white">
-        <select class="w-full appearance-none bg-transparent text-[14px] text-[#bbb] outline-none" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" id="inp-period">
+      <div class="relative border border-gray-border h-[44px] flex items-center px-[12px] bg-white">
+        <select class="w-full appearance-none bg-transparent text-[14px] text-gray-text outline-none" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" id="inp-period">
           <option value="" disabled selected>계약기간 선택</option>
           <option value="12">1년 (12개월)</option>
           <option value="24">2년 (24개월)</option>
@@ -70,7 +70,7 @@
         <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">제설비</label>
         <span class="inline-block w-[5px] h-[5px] rounded-full bg-[#e53e3e] flex-shrink-0"></span>
       </div>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-white">
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-white">
         <input type="number" value="0" class="w-full text-[14px] text-black outline-none bg-transparent text-right" style="font-family: 'Inter', sans-serif;" id="inp-install" oninput="calcInvest()" />
       </div>
     </div>
@@ -81,7 +81,7 @@
         <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">시공비</label>
         <span class="inline-block w-[5px] h-[5px] rounded-full bg-[#e53e3e] flex-shrink-0"></span>
       </div>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-white">
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-white">
         <input type="number" value="0" class="w-full text-[14px] text-black outline-none bg-transparent text-right" style="font-family: 'Inter', sans-serif;" id="inp-construct" oninput="calcInvest()" />
       </div>
     </div>
@@ -92,15 +92,15 @@
         <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">기타비용</label>
         <span class="inline-block w-[5px] h-[5px] rounded-full bg-[#e53e3e] flex-shrink-0"></span>
       </div>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-white">
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-white">
         <input type="number" value="0" class="w-full text-[14px] text-black outline-none bg-transparent text-right" style="font-family: 'Inter', sans-serif;" id="inp-other" oninput="calcInvest()" />
       </div>
     </div>
 
     {{-- 투자계 (자동계산) --}}
     <div class="flex flex-col gap-[6px]">
-      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">투자계 <span class="text-[#2074e2] font-normal">(제설비+시공비+기타비용)</span></label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-[#f5f5f5]">
+      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">투자계 <span class="text-blue-text font-normal">(제설비+시공비+기타비용)</span></label>
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-gray-bg">
         <span class="w-full text-[14px] text-black text-right" style="font-family: 'Inter', sans-serif;" id="out-total-invest">0</span>
       </div>
     </div>
@@ -113,7 +113,7 @@
     {{-- 예상 차입이자율 연리 --}}
     <div class="flex flex-col gap-[6px]">
       <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">예상 차입이자율 연리(%)</label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-white">
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-white">
         <input type="number" value="8.00" step="0.01" class="w-full text-[14px] text-black outline-none bg-transparent text-right" style="font-family: 'Inter', sans-serif;" id="inp-rate" oninput="calcResults()" />
       </div>
     </div>
@@ -124,7 +124,7 @@
         <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">예상 월사용량(KG)</label>
         <span class="inline-block w-[5px] h-[5px] rounded-full bg-[#e53e3e] flex-shrink-0"></span>
       </div>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-white">
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-white">
         <input type="number" value="0" class="w-full text-[14px] text-black outline-none bg-transparent text-right" style="font-family: 'Inter', sans-serif;" id="inp-monthly-kg" oninput="calcResults()" />
       </div>
     </div>
@@ -135,7 +135,7 @@
         <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정단가_매입단가(원/KG)</label>
         <span class="inline-block w-[5px] h-[5px] rounded-full bg-[#e53e3e] flex-shrink-0"></span>
       </div>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-white">
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-white">
         <input type="number" value="0" class="w-full text-[14px] text-black outline-none bg-transparent text-right" style="font-family: 'Inter', sans-serif;" id="inp-buy-price" oninput="calcResults()" />
       </div>
     </div>
@@ -146,7 +146,7 @@
         <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정단가_마진단가(원/KG)</label>
         <span class="inline-block w-[5px] h-[5px] rounded-full bg-[#e53e3e] flex-shrink-0"></span>
       </div>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-white">
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-white">
         <input type="number" value="0" class="w-full text-[14px] text-black outline-none bg-transparent text-right" style="font-family: 'Inter', sans-serif;" id="inp-margin" oninput="calcResults()" />
       </div>
     </div>
@@ -158,40 +158,40 @@
 
     {{-- 추정단가_판매단가 --}}
     <div class="flex flex-col gap-[6px]">
-      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정단가_판매단가(원/KG) <span class="text-[#2074e2] font-normal">(매입단가+마진단가)</span></label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-[#f5f5f5]">
+      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정단가_판매단가(원/KG) <span class="text-blue-text font-normal">(매입단가+마진단가)</span></label>
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-gray-bg">
         <span class="w-full text-[14px] text-black text-right" style="font-family: 'Inter', sans-serif;" id="out-sell-price">0</span>
       </div>
     </div>
 
     {{-- 추정월현금흐름_매입계 --}}
     <div class="flex flex-col gap-[6px]">
-      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정월현금흐름_매입계 <span class="text-[#2074e2] font-normal">(월사용량×매입단가)</span></label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-[#f5f5f5]">
+      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정월현금흐름_매입계 <span class="text-blue-text font-normal">(월사용량×매입단가)</span></label>
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-gray-bg">
         <span class="w-full text-[14px] text-black text-right" style="font-family: 'Inter', sans-serif;" id="out-buy-flow">0</span>
       </div>
     </div>
 
     {{-- 추정월현금흐름_매출계 --}}
     <div class="flex flex-col gap-[6px]">
-      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정월현금흐름_매출계 <span class="text-[#2074e2] font-normal">(월사용량×판매단가)</span></label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-[#f5f5f5]">
+      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정월현금흐름_매출계 <span class="text-blue-text font-normal">(월사용량×판매단가)</span></label>
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-gray-bg">
         <span class="w-full text-[14px] text-black text-right" style="font-family: 'Inter', sans-serif;" id="out-sell-flow">0</span>
       </div>
     </div>
 
     {{-- 추정월현금흐름_단순마진계 --}}
     <div class="flex flex-col gap-[6px]">
-      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정월현금흐름_단순마진계 <span class="text-[#2074e2] font-normal">(매출계-매입계)</span></label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-[#f5f5f5]">
+      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정월현금흐름_단순마진계 <span class="text-blue-text font-normal">(매출계-매입계)</span></label>
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-gray-bg">
         <span class="w-full text-[14px] text-black text-right" style="font-family: 'Inter', sans-serif;" id="out-margin-flow">0</span>
       </div>
     </div>
 
     {{-- 추정월현금흐름_납부이자 --}}
     <div class="flex flex-col gap-[6px]">
-      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정월현금흐름_납부이자 <span class="text-[#2074e2] font-normal">(투자비×차입이자율(월))</span></label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-[#f5f5f5]">
+      <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">추정월현금흐름_납부이자 <span class="text-blue-text font-normal">(투자비×차입이자율(월))</span></label>
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-gray-bg">
         <span class="w-full text-[14px] text-black text-right" style="font-family: 'Inter', sans-serif;" id="out-interest">0</span>
       </div>
     </div>
@@ -209,7 +209,7 @@
     {{-- 사업투자수익률 --}}
     <div class="flex flex-col gap-[6px]">
       <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">사업투자수익률(%, 년)</label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-[#f5f5f5]">
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-gray-bg">
         <span class="w-full text-[14px] text-black text-right" style="font-family: 'Inter', sans-serif;" id="res-roi">1,000</span>
       </div>
     </div>
@@ -217,7 +217,7 @@
     {{-- 가스판매 순마진총액(총계약기간) --}}
     <div class="flex flex-col gap-[6px]">
       <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">가스판매 순마진총액(총계약기간)</label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-[#f5f5f5]">
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-gray-bg">
         <span class="w-full text-[14px] text-black text-right" style="font-family: 'Inter', sans-serif;" id="res-total-margin">228</span>
       </div>
     </div>
@@ -225,7 +225,7 @@
     {{-- 가스판매 순마진총액(년) --}}
     <div class="flex flex-col gap-[6px]">
       <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">가스판매 순마진총액(년)</label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-[#f5f5f5]">
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-gray-bg">
         <span class="w-full text-[14px] text-black text-right" style="font-family: 'Inter', sans-serif;" id="res-yearly-margin">114</span>
       </div>
     </div>
@@ -233,7 +233,7 @@
     {{-- 가스판매 순마진총액(월) --}}
     <div class="flex flex-col gap-[6px]">
       <label class="text-[13px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">가스판매 순마진총액(월)</label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-[#f5f5f5]">
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-gray-bg">
         <span class="w-full text-[14px] text-black text-right" style="font-family: 'Inter', sans-serif;" id="res-monthly-margin">10</span>
       </div>
     </div>
@@ -247,7 +247,7 @@
     <div class="overflow-x-auto hide-scrollbar border border-[#eee]">
       <table class="w-full min-w-[560px] text-[13px]" style="font-family: 'Inter', sans-serif; border-collapse: collapse;">
         <thead>
-          <tr class="bg-[#f5f5f5] border-b border-[#eee]">
+          <tr class="bg-gray-bg border-b border-[#eee]">
             <th class="text-left px-[12px] py-[10px] font-semibold text-black whitespace-nowrap" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">경과월</th>
             <th class="text-right px-[12px] py-[10px] font-semibold text-black whitespace-nowrap" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">월예상매출</th>
             <th class="text-right px-[12px] py-[10px] font-semibold text-black whitespace-nowrap" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">가스매입총액</th>
@@ -289,7 +289,7 @@
   </div>
 
   {{-- 목록 테이블 --}}
-  <div class="border border-[#ddd]">
+  <div class="border border-gray-border">
     {{-- 헤더 --}}
     <div class="grid border-b border-[#ddd] bg-white" style="grid-template-columns: 1fr 1fr 60px;">
       <div class="px-[16px] py-[14px] text-[13px] font-bold text-black text-center" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">수요처</div>
@@ -332,16 +332,16 @@
 
 {{-- 결과보기 / 결과 저장하기 버튼 --}}
 <div class="px-[20px] pb-[20px] pt-[4px]" id="btn-wrap-result">
-  <button class="w-full h-[50px] bg-[#2074e2] text-white text-[15px] font-semibold" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" id="btn-view-result">결과보기</button>
+  <button class="w-full h-[50px] bg-primary text-white text-[15px] font-semibold" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" id="btn-view-result">결과보기</button>
 </div>
 <div class="px-[20px] pb-[20px] pt-[4px] hidden" id="btn-wrap-save">
-  <button class="w-full h-[50px] bg-[#2074e2] text-white text-[15px] font-semibold" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">결과 저장하기</button>
+  <button class="w-full h-[50px] bg-primary text-white text-[15px] font-semibold" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">결과 저장하기</button>
 </div>
 
 {{-- 필터 바텀시트 --}}
 <div id="filter-sheet" class="invisible fixed inset-0 z-50 flex flex-col justify-end" style="max-width:360px; margin:0 auto;">
   {{-- 딤드 오버레이 --}}
-  <div id="filter-overlay" class="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300" onclick="closeFilterSheet()"></div>
+  <div id="filter-overlay" class="absolute inset-0 bg-black-overlay opacity-0 transition-opacity duration-300" onclick="closeFilterSheet()"></div>
   {{-- 시트 --}}
   <div id="filter-drawer" class="relative bg-white rounded-t-[20px] px-[20px] pt-[24px] pb-[20px] mb-[60px] translate-y-full transition-transform duration-300 flex flex-col gap-[20px]">
 
@@ -354,13 +354,13 @@
         <span class="inline-block w-[6px] h-[6px] rounded-full bg-[#e53e3e] flex-shrink-0"></span>
       </div>
       <div class="flex items-center gap-[8px]">
-        <div class="flex-1 border border-[#ddd] h-[44px] flex items-center px-[12px] gap-[8px] bg-white cursor-pointer" onclick="toggleDatePicker('start-date')">
-          <input type="text" placeholder="년-월-일" class="w-full text-[13px] text-[#bbb] outline-none bg-transparent cursor-pointer" style="font-family: 'Inter', sans-serif;" readonly id="start-date-input" />
+        <div class="flex-1 border border-gray-border h-[44px] flex items-center px-[12px] gap-[8px] bg-white cursor-pointer" onclick="toggleDatePicker('start-date')">
+          <input type="text" placeholder="년-월-일" class="w-full text-[13px] text-gray-text outline-none bg-transparent cursor-pointer" style="font-family: 'Inter', sans-serif;" readonly id="start-date-input" />
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
         <span class="text-[14px] text-black shrink-0">~</span>
-        <div class="flex-1 border border-[#ddd] h-[44px] flex items-center px-[12px] gap-[8px] bg-white cursor-pointer" onclick="toggleDatePicker('end-date')">
-          <input type="text" placeholder="년-월-일" class="w-full text-[13px] text-[#bbb] outline-none bg-transparent cursor-pointer" style="font-family: 'Inter', sans-serif;" readonly id="end-date-input" />
+        <div class="flex-1 border border-gray-border h-[44px] flex items-center px-[12px] gap-[8px] bg-white cursor-pointer" onclick="toggleDatePicker('end-date')">
+          <input type="text" placeholder="년-월-일" class="w-full text-[13px] text-gray-text outline-none bg-transparent cursor-pointer" style="font-family: 'Inter', sans-serif;" readonly id="end-date-input" />
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
       </div>
@@ -369,15 +369,15 @@
     {{-- 수요처 --}}
     <div class="flex flex-col gap-[8px]">
       <label class="text-[14px] font-bold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">수요처</label>
-      <div class="border border-[#ddd] h-[44px] flex items-center px-[12px] bg-white">
-        <input type="text" placeholder="수요처 입력" class="w-full text-[14px] text-black outline-none bg-transparent placeholder-[#bbb]" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" />
+      <div class="border border-gray-border h-[44px] flex items-center px-[12px] bg-white">
+        <input type="text" placeholder="수요처 입력" class="w-full text-[14px] text-black outline-none bg-transparent placeholder-gray-text" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" />
       </div>
     </div>
 
     {{-- 날짜 선택기 바텀시트 --}}
     <div id="date-picker-sheet" class="invisible fixed inset-0 z-50 flex flex-col justify-end" style="max-width:360px; margin:0 auto;">
       {{-- 딤드 오버레이 --}}
-      <div id="date-picker-overlay" class="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300" onclick="closeDatePicker()"></div>
+      <div id="date-picker-overlay" class="absolute inset-0 bg-black-overlay opacity-0 transition-opacity duration-300" onclick="closeDatePicker()"></div>
       {{-- 시트 --}}
       <div id="date-picker-drawer" class="relative bg-white rounded-t-[20px] px-[20px] pt-[24px] pb-[20px] mb-[60px] translate-y-full transition-transform duration-300 flex flex-col gap-[20px]">
         <h2 class="text-[18px] font-bold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">날짜 선택</h2>
@@ -410,14 +410,14 @@
         </div>
         
         {{-- 확인 버튼 --}}
-        <button onclick="confirmDate()" class="w-full h-[50px] bg-[#2074e2] text-white text-[15px] font-semibold" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">확인</button>
+        <button onclick="confirmDate()" class="w-full h-[50px] bg-primary text-white text-[15px] font-semibold" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">확인</button>
       </div>
     </div>
 
     {{-- 계약기간 --}}
     <div class="flex flex-col gap-[8px]">
       <label class="text-[14px] font-bold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">계약기간</label>
-      <div class="relative border border-[#ddd] h-[44px] flex items-center px-[12px] bg-white">
+      <div class="relative border border-gray-border h-[44px] flex items-center px-[12px] bg-white">
         <select class="w-full appearance-none bg-transparent text-[14px] text-black outline-none" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">
           <option value="">전체</option>
           <option value="12">1년 (12개월)</option>
@@ -435,7 +435,7 @@
     {{-- 초기화 / 검색 버튼 --}}
     <div class="flex gap-[8px] pt-[4px]">
       <button class="flex-1 h-[50px] bg-[#1a2e5a] text-white text-[15px] font-semibold" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" onclick="closeFilterSheet()">초기화</button>
-      <button class="flex-1 h-[50px] bg-[#2074e2] text-white text-[15px] font-semibold" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" onclick="closeFilterSheet()">검색</button>
+      <button class="flex-1 h-[50px] bg-primary text-white text-[15px] font-semibold" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;" onclick="closeFilterSheet()">검색</button>
     </div>
   </div>
 </div>
@@ -592,9 +592,9 @@
         var isSelected = selectedDate && selectedDate.getDate() === i && selectedDate.getMonth() === month && selectedDate.getFullYear() === year;
         
         var classes = 'text-center py-[8px] text-[13px] cursor-pointer rounded-[8px] ';
-        if (isToday) classes += 'bg-[#2074e2] text-white ';
-        else if (isSelected) classes += 'bg-[#e3f2fd] text-[#2074e2] ';
-        else classes += 'text-black hover:bg-[#f5f5f5] ';
+        if (isToday) classes += 'bg-primary text-white ';
+        else if (isSelected) classes += 'bg-[#e3f2fd] text-blue-text ';
+        else classes += 'text-black hover:bg-gray-bg ';
         
         dates += '<div class="' + classes + '" onclick="selectDate(' + i + ')">' + i + '</div>';
       }

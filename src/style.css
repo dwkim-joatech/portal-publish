@@ -24,6 +24,110 @@
   }
 }
 
+@layer components {
+  /* Form Components */
+  .form-field {
+    @apply flex flex-col gap-[6px];
+  }
+
+  .form-label {
+    @apply text-[13px] font-semibold text-black;
+  }
+
+  .form-input-wrapper {
+    @apply border border-gray-border h-[44px] flex items-center px-[12px] bg-white;
+  }
+
+  .form-input {
+    @apply w-full text-[14px] text-black outline-none bg-transparent placeholder-gray-text;
+  }
+
+  .form-input-disabled {
+    @apply bg-gray-bg border-gray-border;
+  }
+
+  .form-select {
+    @apply w-full appearance-none bg-transparent text-[14px] text-black outline-none;
+  }
+
+  /* Button Variants */
+  .btn-primary {
+    @apply h-[50px] bg-primary text-white text-[15px] font-semibold;
+  }
+
+  .btn-secondary {
+    @apply h-[50px] bg-blue-dark text-white text-[15px] font-semibold;
+  }
+
+  .btn-outline {
+    @apply h-[48px] border border-gray-border bg-white text-[14px] font-semibold text-black;
+  }
+
+  .btn-pill {
+    @apply h-[32px] px-[14px] rounded-full border border-gray-border bg-white text-[13px] text-black;
+  }
+
+  .btn-icon {
+    @apply relative shrink-0 size-[28px] flex items-center justify-center;
+  }
+
+  /* Typography */
+  .title-page {
+    @apply text-[22px] font-semibold leading-normal text-black;
+  }
+
+  .title-section {
+    @apply text-[16px] font-bold text-black;
+  }
+
+  .title-sub {
+    @apply text-[15px] font-semibold text-black;
+  }
+
+  .text-secondary {
+    @apply text-[13px] text-gray-text;
+  }
+
+  .text-helper {
+    @apply text-[13px] text-blue-text font-normal;
+  }
+
+  /* Section Layouts */
+  .section-container {
+    @apply bg-white px-[20px] pt-[20px] pb-[24px] flex flex-col gap-[16px];
+  }
+
+  .section-gray {
+    @apply bg-gray-bg px-[20px] pt-[20px] pb-[24px] flex flex-col gap-[8px];
+  }
+
+  .required-indicator {
+    @apply inline-block w-[5px] h-[5px] rounded-full bg-red-required flex-shrink-0;
+  }
+
+  /* Table & Grid */
+  .table-scrollable {
+    @apply overflow-x-auto hide-scrollbar border border-gray-light;
+  }
+
+  .table-header {
+    @apply bg-gray-bg border-b border-gray-light;
+  }
+
+  .table-row {
+    @apply border-b border-gray-light;
+  }
+
+  /* Modal & Overlay */
+  .modal-overlay {
+    @apply absolute inset-0 bg-black-overlay opacity-0 transition-opacity duration-300;
+  }
+
+  .modal-sheet {
+    @apply relative bg-white rounded-t-[20px] translate-y-full transition-transform duration-300;
+  }
+}
+
 @layer utilities {
   .content-stretch {
     align-content: stretch;

@@ -6,7 +6,7 @@
     <button class="relative shrink-0 size-[28px] flex items-center justify-center" onclick="history.back()">
       <img alt="뒤로가기" class="block size-full" src="{{ asset('images/keyboardArrowRight.svg') }}" style="transform: scaleX(-1)" />
     </button>
-    <p class="font-semibold leading-normal text-[22px] text-black truncate" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">쇼핑몰</p>
+    <p class="title-page truncate">쇼핑몰</p>
   </div>
   <div class="flex items-center gap-[10px]">
     <button class="relative shrink-0 size-[24px]">
@@ -20,16 +20,16 @@
 
 {{-- 상품명 --}}
 <div class="px-[20px] pt-[20px] pb-[16px]">
-  <h1 class="text-[20px] font-semibold text-black leading-snug" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">휴콘스 압력조정기 8kg (2단 감압식 일체형)</h1>
+  <h1 class="text-[20px] font-semibold text-black leading-snug">휴콘스 압력조정기 8kg (2단 감압식 일체형)</h1>
 </div>
 
 {{-- 상품 이미지 슬라이더 --}}
 <div class="relative w-full flex items-center justify-center" style="aspect-ratio: 1/1;">
-  <button class="absolute left-[12px] top-1/2 -translate-y-1/2 z-10 size-[36px] flex items-center justify-center bg-white/80 rounded-full shadow" id="img-prev">
+  <button class="absolute left-[12px] top-1/2 -translate-y-1/2 z-10 size-[36px] flex items-center justify-center bg-white-overlay rounded-full shadow" id="img-prev">
     <img alt="이전" class="block size-[20px]" src="{{ asset('images/keyboardArrowRight.svg') }}" style="transform: scaleX(-1)" />
   </button>
   <img src="{{ asset('images/image33.png') }}" alt="휴콘스 압력조정기" class="w-full h-full object-contain p-[20px]" id="product-img" />
-  <button class="absolute right-[12px] top-1/2 -translate-y-1/2 z-10 size-[36px] flex items-center justify-center bg-white/80 rounded-full shadow" id="img-next">
+  <button class="absolute right-[12px] top-1/2 -translate-y-1/2 z-10 size-[36px] flex items-center justify-center bg-white-overlay rounded-full shadow" id="img-next">
     <img alt="다음" class="block size-[20px]" src="{{ asset('images/keyboardArrowRight.svg') }}" />
   </button>
 </div>
@@ -38,12 +38,12 @@
 <div class="px-[20px] pt-[20px] flex flex-col gap-[12px]">
 
   {{-- 드롭다운 제목 --}}
-  <p class="text-[14px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">
-    제품 선택 <span class="font-normal text-[#999]">(부가세 별도)</span>
+  <p class="text-[14px] font-semibold text-black">
+    제품 선택 <span class="font-normal text-gray-text">(부가세 별도)</span>
   </p>
 
   {{-- 드롭다운 --}}
-  <select class="w-full h-[44px] border border-[#ddd] bg-white px-[12px] text-[14px] text-black outline-none" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">
+  <select class="w-full h-[44px] border border-gray-border bg-white px-[12px] form-select">
     <option value="" disabled selected>제품 선택</option>
     <option value="8kg">8KG (280) [+80000원]</option>
     <option value="16kg">16KG (560) [+160000원]</option>
@@ -59,32 +59,32 @@
 
 {{-- 합계 --}}
 <div class="px-[20px] pt-[16px] flex justify-end">
-  <span class="text-[20px] font-bold text-black" style="font-family: 'Inter', sans-serif;" id="grand-total">0 원</span>
+  <span class="text-[20px] font-bold text-black" id="grand-total">0 원</span>
 </div>
 
 {{-- 구매 버튼 --}}
 <div class="px-[20px] pt-[12px] pb-[24px] flex gap-[8px]">
-  <button class="flex-1 h-[50px] bg-[#1a2e5a] text-white text-[15px] font-semibold" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">장바구니 담기</button>
-  <button class="flex-1 h-[50px] bg-[#2074e2] text-white text-[15px] font-semibold" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">주문하기</button>
+  <button class="flex-1 btn-secondary">장바구니 담기</button>
+  <button class="flex-1 btn-primary">주문하기</button>
 </div>
 
 {{-- 유선문의 --}}
-<div class="border-t border-[#eee] px-[20px] pt-[20px] pb-[24px]">
+<div class="border-t border-gray-light px-[20px] pt-[20px] pb-[24px]">
   <div class="flex items-center justify-between mb-[12px]">
-    <span class="text-[18px] font-bold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">유선문의</span>
-    <button class="h-[32px] px-[14px] rounded-full border border-[#ddd] text-[13px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">제품 문의</button>
+    <span class="text-[18px] font-bold text-black">유선문의</span>
+    <button class="btn-pill">제품 문의</button>
   </div>
   <div class="flex flex-col gap-[2px]">
-    <p class="text-[14px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">고객센터</p>
-    <p class="text-[14px] text-black" style="font-family: 'Inter', sans-serif">1566-2399</p>
-    <p class="text-[13px] text-[#666]" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">월-금 09:00~18:00 (주말, 공휴일 휴무)</p>
+    <p class="text-[14px] font-semibold text-black">고객센터</p>
+    <p class="text-[14px] text-black">1566-2399</p>
+    <p class="text-[13px] text-gray-md">월-금 09:00~18:00 (주말, 공휴일 휴무)</p>
   </div>
 </div>
 
 {{-- 하단 버튼 --}}
 <div class="px-[20px] pb-[20px] flex gap-[8px]">
-  <a href="/shoppingmall-list" class="flex-1 h-[48px] border border-[#ddd] flex items-center justify-center text-[14px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">제품목록</a>
-  <a href="#" class="flex-1 h-[48px] border border-[#ddd] flex items-center justify-center text-[14px] font-semibold text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif;">나의 주문내역</a>
+  <a href="/shoppingmall-list" class="flex-1 btn-outline h-[48px] flex items-center justify-center text-[15px]">제품목록</a>
+  <a href="#" class="flex-1 btn-outline h-[48px] flex items-center justify-center text-[15px]">나의 주문내역</a>
 </div>
 
 <script>
@@ -215,20 +215,3 @@
   })();
 </script>
 
-<script>
-  function openSideMenu() {
-    const sideMenu = document.getElementById('side-menu');
-    const overlay  = document.getElementById('side-menu-overlay');
-    const drawer   = document.getElementById('side-menu-drawer');
-    
-    if (sideMenu && overlay && drawer) {
-      sideMenu.classList.remove('invisible');
-      void sideMenu.offsetWidth;
-      overlay.classList.remove('opacity-0');
-      overlay.classList.add('opacity-100');
-      drawer.classList.remove('translate-x-full');
-      drawer.classList.add('translate-x-0');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-</script>

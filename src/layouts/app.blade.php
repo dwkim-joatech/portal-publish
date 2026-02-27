@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <script type="module" src="http://localhost:3000/@vite/client"></script>
     <script type="module" src="http://localhost:3000/src/main.js"></script>
 </head>
-<body class="p-0 bg-white overflow-x-hidden">
+<body class="p-0 bg-white overflow-hidden h-screen">
     <!-- 페이지 로딩 오버레이 -->
     <div class="page-loading-overlay" id="pageLoading">
         <div class="bg-white rounded-lg px-6 py-4 shadow-lg">
@@ -19,18 +19,19 @@
         </div>
     </div>
 
-    <div class="w-full bg-white relative pb-[60px] page-transition" data-name="app-layout">
+    <!-- 컨텐츠 영역 (네비게이션 높이 제외) -->
+    <div class="w-full h-[calc(100vh-60px)] bg-white relative overflow-y-auto overflow-x-hidden page-transition" data-name="app-layout">
 
         <!-- 개별 페이지 컨텐츠가 주입되는 영역 -->
         {!! $slot !!}
 
-        <!-- 하단 네비게이션 공통 -->
-        <div class="fixed bottom-0 left-0 right-0 z-50">
-            <x-navigation />
-        </div>
-
         <!-- 전체 메뉴 사이드 드로어 -->
         <x-side-menu />
+    </div>
+
+    <!-- 하단 네비게이션 (컨텐츠 영역 밖에 고정) -->
+    <div class="fixed bottom-0 left-0 right-0 z-50">
+        <x-navigation />
     </div>
 </body>
 </html>

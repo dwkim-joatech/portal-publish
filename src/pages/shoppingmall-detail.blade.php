@@ -4,7 +4,7 @@
 <div class="bg-white flex h-[60px] items-center gap-[10px] overflow-hidden px-[20px]">
   <div class="flex flex-1 gap-[10px] items-center min-w-0">
     <button class="relative shrink-0 size-[28px] flex items-center justify-center" onclick="history.back()">
-      <img alt="뒤로가기" class="block size-full" src="{{ asset('images/keyboardArrowRight.svg') }}" style="transform: scaleX(-1)" />
+      <img alt="뒤로가기" class="block size-full scale-x-[-1]" src="{{ asset('images/keyboardArrowRight.svg') }}" />
     </button>
     <p class="title-page truncate">쇼핑몰</p>
   </div>
@@ -24,9 +24,9 @@
 </div>
 
 {{-- 상품 이미지 슬라이더 --}}
-<div class="relative w-full flex items-center justify-center" style="aspect-ratio: 1/1;">
+<div class="relative w-full aspect-square flex items-center justify-center">
   <button class="absolute left-[12px] top-1/2 -translate-y-1/2 z-10 size-[36px] flex items-center justify-center bg-white-overlay rounded-full shadow" id="img-prev">
-    <img alt="이전" class="block size-[20px]" src="{{ asset('images/keyboardArrowRight.svg') }}" style="transform: scaleX(-1)" />
+    <img alt="이전" class="block size-[20px] scale-x-[-1]" src="{{ asset('images/keyboardArrowRight.svg') }}" />
   </button>
   <img src="{{ asset('images/image33.png') }}" alt="휴콘스 압력조정기" class="w-full h-full object-contain p-[20px]" id="product-img" />
   <button class="absolute right-[12px] top-1/2 -translate-y-1/2 z-10 size-[36px] flex items-center justify-center bg-white-overlay rounded-full shadow" id="img-next">
@@ -123,23 +123,23 @@
       };
 
       var optionBox = document.createElement('div');
-      optionBox.className = 'border border-[#ddd] px-[12px] py-[10px] flex flex-col gap-[10px]';
+      optionBox.className = 'border border-gray-border px-[12px] py-[10px] flex flex-col gap-[10px]';
       optionBox.id = optionId;
 
       optionBox.innerHTML = `
         <div class="flex items-center justify-between">
-          <span class="text-[13px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">${optionText}</span>
-          <button class="size-[18px] flex items-center justify-center text-[#999]" onclick="removeOption('${optionId}')">
+          <span class="text-[13px] text-black">${optionText}</span>
+          <button class="size-[18px] flex items-center justify-center text-gray-text" onclick="removeOption('${optionId}')">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M13 1L1 13" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
         </div>
         <div class="flex items-center justify-between">
-          <div class="flex items-center border border-[#ddd] h-[36px]">
+          <div class="flex items-center border border-gray-border h-[36px]">
             <button class="w-[36px] h-full flex items-center justify-center text-[18px] text-black leading-none" onclick="updateQty('${optionId}', -1)">−</button>
-            <span class="w-[36px] h-full flex items-center justify-center text-[14px] text-black" style="font-family: 'Inter', sans-serif;" id="qty-${optionId}">1</span>
+            <span class="w-[36px] h-full flex items-center justify-center text-[14px] text-black" id="qty-${optionId}">1</span>
             <button class="w-[36px] h-full flex items-center justify-center text-[18px] text-black leading-none" onclick="updateQty('${optionId}', 1)">+</button>
           </div>
-          <span class="text-[14px] font-semibold text-black" style="font-family: 'Inter', sans-serif;" id="total-${optionId}">${fmt(price)}</span>
+          <span class="text-[14px] font-semibold text-black" id="total-${optionId}">${fmt(price)}</span>
         </div>
       `;
 

@@ -4,7 +4,7 @@
 <div class="bg-white flex h-[60px] items-center gap-[10px] overflow-hidden px-[20px]">
   <div class="flex flex-1 gap-[10px] items-center min-w-0">
     <button class="relative shrink-0 size-[28px] flex items-center justify-center" onclick="history.back()">
-      <img alt="뒤로가기" class="block size-full" src="{{ asset('images/keyboardArrowRight.svg') }}" style="transform: scaleX(-1)" />
+      <img alt="뒤로가기" class="block size-full scale-x-[-1]" src="{{ asset('images/keyboardArrowRight.svg') }}" />
     </button>
     <p class="title-page truncate">초대코드</p>
   </div>
@@ -24,7 +24,7 @@
 
   {{-- 초대코드 등록 --}}
   <div class="form-field gap-[8px]">
-    <label class="text-[14px] font-bold text-black">초대코드 등록</label>
+    <label class="sheet-label">초대코드 등록</label>
     <div class="form-input-wrapper h-[52px] px-[14px]">
       <input type="text" placeholder="초대코드 입력" class="form-input" />
     </div>

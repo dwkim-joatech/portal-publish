@@ -33,6 +33,10 @@
     @apply text-[13px] font-semibold text-black;
   }
 
+  .sheet-label {
+    @apply text-[14px] font-bold text-black;
+  }
+
   .form-input-wrapper {
     @apply border border-gray-border h-[44px] flex items-center px-[12px] bg-white;
   }
@@ -79,6 +83,10 @@
     @apply text-[16px] font-bold text-black;
   }
 
+  .title-lg {
+    @apply text-[18px] font-semibold text-black;
+  }
+
   .title-sub {
     @apply text-[15px] font-semibold text-black;
   }
@@ -104,6 +112,30 @@
     @apply inline-block w-[5px] h-[5px] rounded-full bg-red-required flex-shrink-0;
   }
 
+  /* 읽기전용 출력 필드 */
+  .form-output {
+    @apply border border-gray-border h-[44px] flex items-center px-[12px] bg-gray-bg;
+  }
+
+  .form-output-text {
+    @apply w-full text-[14px] text-black text-right;
+  }
+
+  /* 투자분석 탭 버튼 */
+  .invest-tab {
+    @apply h-[44px] px-[4px] text-[14px] text-gray-text;
+  }
+
+  .invest-tab-active {
+    @apply font-semibold text-black border-b-[2px] border-black;
+  }
+
+  /* 결과목록 3열 그리드 */
+  .list-grid-3col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 60px;
+  }
+
   /* Table & Grid */
   .table-scrollable {
     @apply overflow-x-auto hide-scrollbar border border-gray-light;
@@ -115,6 +147,23 @@
 
   .table-row {
     @apply border-b border-gray-light;
+  }
+
+  .table-th {
+    @apply px-[12px] py-[10px] font-semibold text-black whitespace-nowrap;
+  }
+
+  .table-td {
+    @apply px-[12px] py-[10px] text-black;
+  }
+
+  /* 목록 그리드 셀 */
+  .list-grid-th {
+    @apply px-[16px] py-[14px] text-[13px] font-bold text-black text-center;
+  }
+
+  .list-grid-td {
+    @apply px-[16px] py-[16px] text-[14px] text-black;
   }
 
   /* Modal & Overlay */

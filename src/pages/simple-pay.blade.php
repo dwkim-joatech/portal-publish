@@ -4,7 +4,7 @@
 <div class="bg-white flex h-[60px] items-center gap-[10px] overflow-hidden px-[20px]">
   <div class="flex flex-1 gap-[10px] items-center min-w-0">
     <button class="relative shrink-0 size-[28px] flex items-center justify-center" onclick="history.back()">
-      <img alt="뒤로가기" class="block size-full" src="{{ asset('images/keyboardArrowRight.svg') }}" style="transform: scaleX(-1)" />
+      <img alt="뒤로가기" class="block size-full scale-x-[-1]" src="{{ asset('images/keyboardArrowRight.svg') }}" />
     </button>
     <p class="title-page truncate">간편결제(대면)</p>
   </div>

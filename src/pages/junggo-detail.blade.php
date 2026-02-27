@@ -17,13 +17,13 @@
       <span>2026.01.16</span>
     </div>
     <div class="flex gap-[6px]">
-      <span class="px-[6px] h-[18px] text-[11px] leading-[18px] border border-[rgba(32,116,226,0.6)] text-blue-text rounded-full flex items-center">판매글</span>
-      <span class="px-[6px] h-[18px] text-[11px] leading-[18px] bg-[rgba(32,116,226,0.15)] text-blue-text rounded-full flex items-center">거래중</span>
+      <span class="px-[6px] h-[18px] text-[11px] leading-[18px] border border-primary/60 text-primary rounded-full flex items-center">판매글</span>
+      <span class="px-[6px] h-[18px] text-[11px] leading-[18px] bg-primary/15 text-primary rounded-full flex items-center">거래중</span>
     </div>
   </div>
 
   {{-- 대표 이미지 --}}
-  <div class="relative w-full aspect-square bg-[#eee] overflow-hidden">
+  <div class="relative w-full aspect-square bg-gray-light overflow-hidden">
     <img src="{{ asset('images/image33.png') }}" alt="" class="absolute w-full h-full object-cover" />
   </div>
 
@@ -39,13 +39,13 @@
   <div class="border-t border-b border-gray-light flex flex-col w-full">
     <div class="flex items-center gap-[10px] py-[10px] border-b border-gray-light">
       <div class="relative shrink-0 size-[20px]">
-        <img alt="" class="block size-full" src="{{ asset('images/keyboardArrowRight.svg') }}" style="transform: rotate(-90deg)" />
+        <img alt="" class="block size-full -rotate-90" src="{{ asset('images/keyboardArrowRight.svg') }}" />
       </div>
       <span class="flex-1 text-[12px] text-black leading-normal truncate">LPG 50KG 용기 판매합니다.</span>
     </div>
     <div class="flex items-center gap-[10px] py-[10px]">
       <div class="relative shrink-0 size-[20px]">
-        <img alt="" class="block size-full" src="{{ asset('images/keyboardArrowRight.svg') }}" style="transform: rotate(90deg)" />
+        <img alt="" class="block size-full rotate-90" src="{{ asset('images/keyboardArrowRight.svg') }}" />
       </div>
       <span class="flex-1 text-[12px] text-black leading-normal truncate">200KG 탱크 구합니다.</span>
     </div>

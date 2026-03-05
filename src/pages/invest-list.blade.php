@@ -94,7 +94,7 @@
 {{-- 필터 바텀시트 --}}
 <div id="filter-sheet" class="invisible fixed inset-0 z-50 flex flex-col justify-end">
   <div id="filter-overlay" class="absolute inset-0 bg-black-overlay opacity-0 transition-opacity duration-300" onclick="closeFilterSheet()"></div>
-  <div id="filter-drawer" class="relative bg-white rounded-t-[20px] px-[20px] pt-[24px] pb-[80px] translate-y-full transition-transform duration-300 flex flex-col gap-[20px]">
+  <div id="filter-drawer" class="relative bg-white rounded-t-[20px] px-[20px] pt-[24px] pb-[20px] mb-[60px] translate-y-full transition-transform duration-300 flex flex-col gap-[20px]">
 
     <h2 class="text-[22px] font-bold text-black">필터</h2>
 
@@ -128,7 +128,7 @@
     {{-- 날짜 선택기 바텀시트 --}}
     <div id="date-picker-sheet" class="invisible fixed inset-0 z-[60] flex flex-col justify-end">
       <div id="date-picker-overlay" class="absolute inset-0 bg-black-overlay opacity-0 transition-opacity duration-300" onclick="closeDatePicker()"></div>
-      <div id="date-picker-drawer" class="relative bg-white rounded-t-[20px] px-[20px] pt-[24px] pb-[80px] translate-y-full transition-transform duration-300 flex flex-col gap-[20px]">
+      <div id="date-picker-drawer" class="relative bg-white rounded-t-[20px] px-[20px] pt-[24px] pb-[20px] mb-[60px] translate-y-full transition-transform duration-300 flex flex-col gap-[20px]">
         <h2 class="text-[18px] font-bold text-black">날짜 선택</h2>
 
         {{-- 월/년 선택 --}}

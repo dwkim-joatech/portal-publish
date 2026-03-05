@@ -163,7 +163,7 @@
 
   {{-- 신청하기 버튼 --}}
   <div class="px-[20px] pt-[4px]">
-    <button class="w-full btn-primary">신청하기</button>
+    <button class="w-full btn-primary" onclick="location.href='../company-select'">신청하기</button>
   </div>
 
 </div>

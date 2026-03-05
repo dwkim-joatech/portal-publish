@@ -87,7 +87,7 @@
   {{-- 섹션 헤더 --}}
   <div class="flex items-center justify-between">
     <h2 class="text-[18px] font-bold text-black">주문자 정보</h2>
-    <button class="btn-pill">배송정보 선택</button>
+    <button class="btn-pill" onclick="location.href='../delivery-select'">배송정보 선택</button>
   </div>
 
   {{-- 결제수단 선택 --}}
@@ -212,5 +212,5 @@
 
 {{-- 결제하기 버튼 --}}
 <div class="px-[20px] pb-[24px]">
-  <button class="w-full btn-primary">결제하기</button>
+  <button class="w-full btn-primary" onclick="location.href='../order-info'">결제하기</button>
 </div>

@@ -22,12 +22,12 @@
     <div class="bg-[#131e56] shrink-0 px-0 pt-[20px]">
       <!-- 1행 -->
       <div class="flex items-center">
-        <div class="flex flex-1 flex-col gap-[4px] items-center justify-center px-[10px] py-[10px]">
+        <a href="simple-pay" class="flex flex-1 flex-col gap-[4px] items-center justify-center px-[10px] py-[10px]">
           <div class="relative shrink-0 size-[24px]">
             <img alt="간편결제(대면)" class="block max-w-none size-full" src="{{ asset('images/creditCard.svg') }}" />
           </div>
-          <p class="font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.8)] text-center" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">간편결제(대면)</p>
-        </div>
+          <p class="font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.8)] text-center" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">간편카드결제</p>
+        </a>
         <div class="flex flex-1 flex-col gap-[4px] items-center justify-center px-[10px] py-[10px]">
           <div class="relative shrink-0 size-[24px]">
             <img alt="완성검사" class="block max-w-none size-full" src="{{ asset('images/manageSearch.svg') }}" />
@@ -92,7 +92,7 @@
         <p data-menu-label="junggo" class="flex-1 font-normal leading-[24px] text-[14px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">중고장터</p>
         <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/keyboardArrowRight24.svg') }}" /></div>
       </a>
-      <a href="#" class="flex gap-[10px] items-center w-full">
+      <a href="shoppingmall-list" class="flex gap-[10px] items-center w-full">
         <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/storefront.svg') }}" /></div>
         <p class="flex-1 font-normal leading-[24px] text-[14px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">쇼핑몰</p>
         <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/keyboardArrowRight24.svg') }}" /></div>

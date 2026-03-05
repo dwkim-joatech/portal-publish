@@ -25,6 +25,7 @@
     <div class="relative form-input-wrapper">
       <select class="form-select">
         <option value="">업체 선택</option>
+        <option value="joatech">조아테크</option>
       </select>
       <img src="{{ asset('images/keyboardArrowRight.svg') }}" alt="" class="absolute right-[12px] size-[16px] pointer-events-none rotate-90" />
     </div>
@@ -34,5 +35,5 @@
 
 {{-- ===== 선택 완료 버튼 ===== --}}
 <div class="px-[20px] pb-[24px]">
-  <button class="w-full btn-primary">선택 완료</button>
+  <button class="w-full btn-primary" onclick="location.href='../card-payment'">선택 완료</button>
 </div>

@@ -137,7 +137,7 @@
         <p class="flex-1 font-normal leading-[24px] text-[14px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">장바구니</p>
         <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/keyboardArrowRight24.svg') }}" /></div>
       </a>
-      <a href="#" class="flex gap-[10px] items-center w-full pb-[20px]">
+      <a href="{{ asset('mypage') }}" class="flex gap-[10px] items-center w-full pb-[20px]">
         <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/person.svg') }}" /></div>
         <p class="flex-1 font-normal leading-[24px] text-[14px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">마이페이지</p>
         <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/keyboardArrowRight24.svg') }}" /></div>

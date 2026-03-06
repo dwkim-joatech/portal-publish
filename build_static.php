@@ -59,22 +59,28 @@ function renderBlade($content) {
     return $content;
 }
 
-// Find built CSS and JS asset filenames from dist/assets/
-$assetsDir = __DIR__ . '/dist/assets';
-if (!is_dir($assetsDir)) {
-    echo "Error: dist/assets/ not found. Run 'npm run build' first.\n";
+// Find built CSS and JS asset filenames from Vite-generated dist/index.html
+$viteIndexPath = __DIR__ . '/dist/index.html';
+if (!file_exists($viteIndexPath)) {
+    echo "Error: dist/index.html not found. Run 'npm run build' first.\n";
     exit(1);
 }
 
+$viteIndexContent = file_get_contents($viteIndexPath);
+
 $cssFile = '';
 $jsFile = '';
-foreach (scandir($assetsDir) as $file) {
-    if (str_ends_with($file, '.css')) $cssFile = $file;
-    if (str_ends_with($file, '.js') && !str_ends_with($file, '.js.map')) $jsFile = $file;
+
+if (preg_match('/href="(?:' . preg_quote($base, '/') . ')?\/assets\/([^\"]+\.css)"/', $viteIndexContent, $cssMatches)) {
+    $cssFile = $cssMatches[1];
+}
+
+if (preg_match('/src="(?:' . preg_quote($base, '/') . ')?\/assets\/([^\"]+\.js)"/', $viteIndexContent, $jsMatches)) {
+    $jsFile = $jsMatches[1];
 }
 
 if (!$cssFile || !$jsFile) {
-    echo "Error: Built CSS/JS assets not found in dist/assets/\n";
+    echo "Error: Built CSS/JS assets not found in dist/index.html\n";
     exit(1);
 }
 

@@ -55,12 +55,12 @@
           </div>
           <p class="font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.8)] text-center" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">단위변환</p>
         </div>
-        <div class="flex flex-1 flex-col gap-[4px] items-center justify-center px-[10px] py-[10px]">
+        <a href="invest-expect" class="flex flex-1 flex-col gap-[4px] items-center justify-center px-[10px] py-[10px]">
           <div class="relative shrink-0 size-[24px]">
             <img alt="투자예상분석" class="block max-w-none size-full" src="{{ asset('images/trendingUp.svg') }}" />
           </div>
           <p class="font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.8)] text-center" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">투자예상분석</p>
-        </div>
+        </a>
       </div>
       <!-- 3행 -->
       <div class="flex items-start pb-[30px]">
@@ -132,7 +132,7 @@
         <p class="flex-1 font-normal leading-[24px] text-[14px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">홈</p>
         <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/keyboardArrowRight24.svg') }}" /></div>
       </a>
-      <a href="#" class="flex gap-[10px] items-center w-full">
+      <a href="{{ asset('basket') }}" class="flex gap-[10px] items-center w-full">
         <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/shoppingBag.svg') }}" /></div>
         <p class="flex-1 font-normal leading-[24px] text-[14px] text-black" style="font-family: 'Inter', 'Noto Sans KR', sans-serif">장바구니</p>
         <div class="relative shrink-0 size-[24px]"><img alt="" class="block max-w-none size-full" src="{{ asset('images/keyboardArrowRight24.svg') }}" /></div>

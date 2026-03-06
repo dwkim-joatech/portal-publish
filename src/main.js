@@ -46,6 +46,15 @@ class PageTransition {
         this.transitionToPage(link.href);
       }
     });
+
+    // bfcache 복원 시 로딩 오버레이 숨기기
+    window.addEventListener('pageshow', (event) => {
+      this.hideLoading();
+      if (event.persisted) {
+        const mainContent = document.querySelector('[data-name="app-layout"]');
+        if (mainContent) mainContent.classList.add('page-transition-active');
+      }
+    });
   }
 
   showLoading() {

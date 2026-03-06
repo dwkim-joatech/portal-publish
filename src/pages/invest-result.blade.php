@@ -82,5 +82,11 @@
 
 {{-- 결과 저장하기 버튼 --}}
 <div class="px-[20px] pb-[20px] pt-[4px]">
-  <button class="btn-primary w-full">결과 저장하기</button>
+  <button class="btn-primary w-full" onclick="saveInvestResult()">결과 저장하기</button>
 </div>
+
+<script>
+function saveInvestResult() {
+    location.href = 'invest-list';
+}
+</script>

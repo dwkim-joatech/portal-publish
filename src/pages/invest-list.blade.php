@@ -94,7 +94,7 @@
 {{-- 필터 바텀시트 --}}
 <div id="filter-sheet" class="invisible fixed inset-0 z-50 flex flex-col justify-end">
   <div id="filter-overlay" class="absolute inset-0 bg-black-overlay opacity-0 transition-opacity duration-300" onclick="closeFilterSheet()"></div>
-  <div id="filter-drawer" class="relative bg-white rounded-t-[20px] px-[20px] pt-[24px] pb-[20px] mb-[60px] translate-y-full transition-transform duration-300 flex flex-col gap-[20px]">
+  <div id="filter-drawer" class="relative bg-white rounded-t-[20px] px-[20px] pt-[24px] pb-[20px] translate-y-full transition-transform duration-300 flex flex-col gap-[20px]">
 
     <h2 class="text-[22px] font-bold text-black">필터</h2>
 
@@ -106,12 +106,12 @@
       </div>
       <div class="flex items-center gap-[8px]">
         <div class="flex-1 form-input-wrapper gap-[8px] cursor-pointer" onclick="toggleDatePicker('start-date')">
-          <input type="text" placeholder="년-월-일" class="w-full text-[13px] text-gray-text outline-none bg-transparent cursor-pointer" readonly id="start-date-input" />
+          <input type="text" placeholder="년-월-일" class="w-full text-[13px] text-gray-text outline-none bg-transparent cursor-pointer pointer-events-none" readonly id="start-date-input" />
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
         <span class="text-[14px] text-black shrink-0">~</span>
         <div class="flex-1 form-input-wrapper gap-[8px] cursor-pointer" onclick="toggleDatePicker('end-date')">
-          <input type="text" placeholder="년-월-일" class="w-full text-[13px] text-gray-text outline-none bg-transparent cursor-pointer" readonly id="end-date-input" />
+          <input type="text" placeholder="년-월-일" class="w-full text-[13px] text-gray-text outline-none bg-transparent cursor-pointer pointer-events-none" readonly id="end-date-input" />
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
       </div>
@@ -128,7 +128,7 @@
     {{-- 날짜 선택기 바텀시트 --}}
     <div id="date-picker-sheet" class="invisible fixed inset-0 z-[60] flex flex-col justify-end">
       <div id="date-picker-overlay" class="absolute inset-0 bg-black-overlay opacity-0 transition-opacity duration-300" onclick="closeDatePicker()"></div>
-      <div id="date-picker-drawer" class="relative bg-white rounded-t-[20px] px-[20px] pt-[24px] pb-[20px] mb-[60px] translate-y-full transition-transform duration-300 flex flex-col gap-[20px]">
+      <div id="date-picker-drawer" class="relative bg-white rounded-t-[20px] px-[20px] pt-[24px] pb-[20px] translate-y-full transition-transform duration-300 flex flex-col gap-[20px]">
         <h2 class="text-[18px] font-bold text-black">날짜 선택</h2>
 
         {{-- 월/년 선택 --}}

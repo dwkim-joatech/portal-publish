@@ -117,12 +117,22 @@ $pages = [
     'order-info'        => 'order-info.html',
     'product-inquiry'   => 'product-inquiry.html',
     'mypage'            => 'mypage.html',
+    'order-list'        => 'order-list.html',
+    'inspection-list'   => 'inspection-list.html',
+    'bulk-check-list'   => 'bulk-check-list.html',
+    'bulk-check-detail' => 'bulk-check-detail.html',
+    'my-junggo-list'    => 'my-junggo-list.html',
+    'facility-list'     => 'facility-list.html',
+    'debt-list'         => 'debt-list.html',
 ];
 
 foreach ($pages as $pageName => $outputPath) {
     $pagePath = __DIR__ . '/src/pages/' . $pageName . '.blade.php';
     if (!file_exists($pagePath)) {
-        echo "Warning: Page not found — $pageName.blade.php\n";
+        $pagePath = __DIR__ . '/src/pages/' . $pageName . '.php';
+    }
+    if (!file_exists($pagePath)) {
+        echo "Warning: Page not found — $pageName.blade.php or $pageName.php\n";
         continue;
     }
 

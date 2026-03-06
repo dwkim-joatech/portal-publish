@@ -125,6 +125,11 @@ $pages = [
     'simple-card-payment'  => 'simple-card-payment.html',
     'facility-list'     => 'facility-list.html',
     'debt-list'         => 'debt-list.html',
+    'inquiry-list'      => 'inquiry-list.html',
+    'member-info'       => 'member-info.html',
+    'delivery-address'  => 'delivery-address.html',
+    'favorite-list'     => 'favorite-list.html',
+    'favorite-write'    => 'favorite-write.html',
 ];
 
 foreach ($pages as $pageName => $outputPath) {

@@ -3,8 +3,8 @@
 {{-- GNB: 타이틀 + X 닫기 --}}
 <div class="flex items-center justify-between px-[20px] h-[60px]">
   <p class="text-[22px] font-bold text-black">벌크로리점검 신청내역</p>
-  <button onclick="history.back()" class="size-[28px] flex items-center justify-center">
-    <img src="{{ asset('images/close.svg') }}" alt="닫기" class="size-[24px]" />
+  <button onclick="history.back()" class="size-[28px] flex items-center justify-center text-black">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
 </div>
 

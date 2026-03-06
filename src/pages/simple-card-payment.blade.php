@@ -30,11 +30,13 @@
 </div>
 
 {{-- 상태 필터 탭 --}}
-<div class="flex items-center gap-[6px] px-[20px] pb-[12px]" data-status-filter>
-  <button type="button" class="h-[34px] px-[14px] rounded-full text-[14px] font-medium bg-black text-white" data-status-filter-button data-active="true">전체 0</button>
-  <button type="button" class="h-[34px] px-[14px] rounded-full text-[14px] text-black border border-gray-border bg-white" data-status-filter-button>결제성공 0</button>
-  <button type="button" class="h-[34px] px-[14px] rounded-full text-[14px] text-black border border-gray-border bg-white" data-status-filter-button>결제실패 0</button>
-  <button type="button" class="h-[34px] px-[14px] rounded-full text-[14px] text-black border border-gray-border bg-white" data-status-filter-button>결제취소 0</button>
+<div class="px-[20px] pb-[12px] overflow-x-auto" data-status-filter>
+  <div class="flex items-center gap-[6px] w-max min-w-max">
+    <button type="button" class="h-[34px] px-[14px] rounded-full text-[14px] whitespace-nowrap font-medium bg-black text-white" data-status-filter-button data-active="true">전체 0</button>
+    <button type="button" class="h-[34px] px-[14px] rounded-full text-[14px] whitespace-nowrap text-black border border-gray-border bg-white" data-status-filter-button>결제성공 0</button>
+    <button type="button" class="h-[34px] px-[14px] rounded-full text-[14px] whitespace-nowrap text-black border border-gray-border bg-white" data-status-filter-button>결제실패 0</button>
+    <button type="button" class="h-[34px] px-[14px] rounded-full text-[14px] whitespace-nowrap text-black border border-gray-border bg-white" data-status-filter-button>결제취소 0</button>
+  </div>
 </div>
 
 {{-- 빈 상태 --}}

@@ -206,40 +206,6 @@
     mask-position: center;
   }
 
-  /* 페이지 전환 효과 */
-  .page-transition {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .page-transition-active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* 페이지 로딩 오버레이 */
-  .page-loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-  }
-
-  .page-loading-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
   /* 스크롤바 숨기기 (스크롤 기능은 유지) */
   .hide-scrollbar {
     -ms-overflow-style: none;  /* IE and Edge */

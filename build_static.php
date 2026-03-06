@@ -116,6 +116,7 @@ $pages = [
     'delivery-reg'      => 'delivery-reg.html',
     'order-info'        => 'order-info.html',
     'product-inquiry'   => 'product-inquiry.html',
+    'mypage'            => 'mypage.html',
 ];
 
 foreach ($pages as $pageName => $outputPath) {

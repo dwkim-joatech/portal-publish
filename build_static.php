@@ -121,7 +121,8 @@ $pages = [
     'inspection-list'   => 'inspection-list.html',
     'bulk-check-list'   => 'bulk-check-list.html',
     'bulk-check-detail' => 'bulk-check-detail.html',
-    'my-junggo-list'    => 'my-junggo-list.html',
+    'my-junggo-list'       => 'my-junggo-list.html',
+    'simple-card-payment'  => 'simple-card-payment.html',
     'facility-list'     => 'facility-list.html',
     'debt-list'         => 'debt-list.html',
 ];

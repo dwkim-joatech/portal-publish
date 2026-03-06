@@ -6,7 +6,9 @@
   </div>
   <div class="content-stretch flex gap-[6px] items-center relative shrink-0">
     <div class="relative shrink-0 size-[24px]">
-      <img alt="프로필" class="block max-w-none size-full brightness-0 invert" src="{{ asset('images/person.svg') }}" />
+      <a href="mypage">
+        <img alt="프로필" class="block max-w-none size-full brightness-0 invert" src="{{ asset('images/person.svg') }}" />
+      </a>
     </div>
     <div class="relative shrink-0 size-[24px]">
       <img alt="메뉴" class="block max-w-none size-full brightness-0 invert" src="{{ asset('images/menu.svg') }}" />

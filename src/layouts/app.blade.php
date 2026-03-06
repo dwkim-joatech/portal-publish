@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>조아테크 - {{ $title ?? '포털' }}</title>
     <!-- Load Vite client and main.js -->
+    <link rel="stylesheet" href="http://localhost:3000/src/style.css">
     <script type="module" src="http://localhost:3000/@vite/client"></script>
     <script type="module" src="http://localhost:3000/src/main.js"></script>
 </head>

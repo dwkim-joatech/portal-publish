@@ -1,9 +1,9 @@
-<div id="side-menu" class="fixed inset-0 z-[100] invisible" data-name="side-menu">
+<div id="side-menu" class="fixed inset-0 z-[100] invisible" data-name="side-menu" style="visibility: hidden; pointer-events: none;">
   <!-- 어두운 오버레이 -->
-  <div id="side-menu-overlay" class="absolute inset-0 bg-[rgba(0,0,0,0.6)] opacity-0 transition-opacity duration-300"></div>
+  <div id="side-menu-overlay" class="absolute inset-0 bg-[rgba(0,0,0,0.6)] opacity-0 transition-opacity duration-300" style="opacity: 0;"></div>
 
   <!-- 드로어 패널 (300px, 우측) -->
-  <div id="side-menu-drawer" class="absolute right-0 top-0 h-full w-[300px] bg-white flex flex-col overflow-clip translate-x-full transition-transform duration-300 ease-in-out">
+  <div id="side-menu-drawer" class="absolute right-0 top-0 h-full w-[300px] bg-white flex flex-col overflow-clip translate-x-full transition-transform duration-300 ease-in-out" style="transform: translateX(100%);">
 
     <!-- 상태바 (네이비) -->
     <!-- <div class="bg-[#131e56] h-[40px] relative w-full shrink-0">
@@ -159,24 +159,32 @@
     function openMenu() {
       clearTimeout(closeTimeout);
       sideMenu.classList.remove('invisible');
+      sideMenu.style.visibility = 'visible';
+      sideMenu.style.pointerEvents = 'auto';
       // Forcing reflow to allow transition to run properly
       void sideMenu.offsetWidth;
       overlay.classList.remove('opacity-0');
       overlay.classList.add('opacity-100');
+      overlay.style.opacity = '1';
       drawer.classList.remove('translate-x-full');
       drawer.classList.add('translate-x-0');
+      drawer.style.transform = 'translateX(0)';
       document.body.style.overflow = 'hidden';
     }
 
     function closeMenu() {
       overlay.classList.remove('opacity-100');
       overlay.classList.add('opacity-0');
+      overlay.style.opacity = '0';
       drawer.classList.remove('translate-x-0');
       drawer.classList.add('translate-x-full');
+      drawer.style.transform = 'translateX(100%)';
       document.body.style.overflow = '';
 
       closeTimeout = setTimeout(() => {
         sideMenu.classList.add('invisible');
+        sideMenu.style.visibility = 'hidden';
+        sideMenu.style.pointerEvents = 'none';
       }, 300);
     }
 

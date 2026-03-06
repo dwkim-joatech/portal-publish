@@ -96,11 +96,26 @@ $layout = str_replace('</head>', $productionHead . "\n</head>", $layout);
 
 // Page name → output path mapping
 $pages = [
-    'main'          => 'index.html',
-    'sub-test'      => 'sub-test.html',
-    'junggo-list'   => 'junggo-list.html',
-    'junggo-detail' => 'junggo-detail.html',
-    'junggo-write'  => 'junggo-write.html',
+    'main'              => 'index.html',
+    'sub-test'          => 'sub-test.html',
+    'junggo-list'       => 'junggo-list.html',
+    'junggo-detail'     => 'junggo-detail.html',
+    'junggo-write'      => 'junggo-write.html',
+    'invest-list'       => 'invest-list.html',
+    'invest-expect'     => 'invest-expect.html',
+    'invest-result'     => 'invest-result.html',
+    'simple-pay'        => 'simple-pay.html',
+    'company-select'    => 'company-select.html',
+    'card-payment'      => 'card-payment.html',
+    'invite-code'       => 'invite-code.html',
+    'shoppingmall-list' => 'shoppingmall-list.html',
+    'shoppingmall-detail' => 'shoppingmall-detail.html',
+    'basket'            => 'basket.html',
+    'buy'               => 'buy.html',
+    'delivery-select'   => 'delivery-select.html',
+    'delivery-reg'      => 'delivery-reg.html',
+    'order-info'        => 'order-info.html',
+    'product-inquiry'   => 'product-inquiry.html',
 ];
 
 foreach ($pages as $pageName => $outputPath) {
@@ -118,6 +133,9 @@ foreach ($pages as $pageName => $outputPath) {
 
     // Fix hardcoded /images/ paths not processed by asset() helper
     $rendered = preg_replace('#(src|href)="/images/#', '$1="' . $base . '/images/', $rendered);
+
+    // Fix any remaining absolute paths not using asset() helper (e.g. href="/page", href="/")
+    $rendered = preg_replace('#(href|src)="(/(?!' . ltrim($base, '/') . '))#', '$1="' . $base . '$2', $rendered);
 
     $outputFile = __DIR__ . '/dist/' . $outputPath;
     $outputDir = dirname($outputFile);

@@ -64,15 +64,15 @@
 
 {{-- 구매 버튼 --}}
 <div class="px-[20px] pt-[12px] pb-[24px] flex gap-[8px]">
-  <button class="flex-1 btn-secondary" onclick="location.href='../basket'">장바구니 담기</button>
-  <button class="flex-1 btn-primary" onclick="location.href='../buy'">주문하기</button>
+  <button class="flex-1 btn-secondary" onclick="location.href='basket'">장바구니 담기</button>
+  <button class="flex-1 btn-primary" onclick="location.href='buy'">주문하기</button>
 </div>
 
 {{-- 유선문의 --}}
 <div class="border-t border-gray-light px-[20px] pt-[20px] pb-[24px]">
   <div class="flex items-center justify-between mb-[12px]">
     <span class="text-[18px] font-bold text-black">유선문의</span>
-    <button class="btn-pill" onclick="location.href='../product-inquiry'">제품 문의</button>
+    <button class="btn-pill" onclick="location.href='product-inquiry'">제품 문의</button>
   </div>
   <div class="flex flex-col gap-[2px]">
     <p class="text-[14px] font-semibold text-black">고객센터</p>
@@ -83,7 +83,7 @@
 
 {{-- 하단 버튼 --}}
 <div class="px-[20px] pb-[20px] flex gap-[8px]">
-  <a href="/shoppingmall-list" class="flex-1 btn-outline h-[48px] flex items-center justify-center text-[15px]">제품목록</a>
+  <a href="{{ asset('shoppingmall-list') }}" class="flex-1 btn-outline h-[48px] flex items-center justify-center text-[15px]">제품목록</a>
   <a href="javascript:void(0);" class="flex-1 btn-outline h-[48px] flex items-center justify-center text-[15px]" onclick="alert('작업중입니다.'); return false;">나의 주문내역</a>
 </div>
 

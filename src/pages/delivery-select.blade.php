@@ -64,5 +64,5 @@
 
 {{-- ===== 배송지 추가 버튼 ===== --}}
 <div class="px-[20px] py-[16px] mt-auto">
-  <button class="w-full btn-primary" onclick="location.href='../delivery-reg'">배송지 추가</button>
+  <button class="w-full btn-primary" onclick="location.href='delivery-reg'">배송지 추가</button>
 </div>

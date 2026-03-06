@@ -150,7 +150,7 @@
 <div class="px-[20px]">
 
   {{-- 아이템 1 --}}
-  <a href="/shoppingmall-detail" class="flex gap-[12px] py-[16px] border-b border-gray-light">
+  <a href="{{ asset('shoppingmall-detail') }}" class="flex gap-[12px] py-[16px] border-b border-gray-light">
     <div class="relative w-[80px] h-[80px] bg-gray-bg flex-shrink-0 overflow-hidden flex items-center justify-center">
       <img src="{{ asset('images/image27.png') }}" alt="" class="absolute w-full h-full object-contain p-[4px]" />
     </div>
@@ -161,7 +161,7 @@
   </a>
 
   {{-- 아이템 2 --}}
-  <a href="/shoppingmall-detail" class="flex gap-[12px] py-[16px] border-b border-gray-light">
+  <a href="{{ asset('shoppingmall-detail') }}" class="flex gap-[12px] py-[16px] border-b border-gray-light">
     <div class="relative w-[80px] h-[80px] bg-gray-bg flex-shrink-0 overflow-hidden flex items-center justify-center">
       <img src="{{ asset('images/image30.png') }}" alt="" class="absolute w-full h-full object-contain p-[4px]" />
     </div>
@@ -172,7 +172,7 @@
   </a>
 
   {{-- 아이템 3 --}}
-  <a href="/shoppingmall-detail" class="flex gap-[12px] py-[16px] border-b border-gray-light">
+  <a href="{{ asset('shoppingmall-detail') }}" class="flex gap-[12px] py-[16px] border-b border-gray-light">
     <div class="relative w-[80px] h-[80px] bg-gray-bg flex-shrink-0 overflow-hidden flex items-center justify-center">
       <img src="{{ asset('images/image33.png') }}" alt="" class="absolute w-full h-full object-contain p-[4px]" />
     </div>

@@ -14,7 +14,7 @@
   </div>
 
   <div class="mt-[40px]">
-    <a href="/" class="inline-flex h-[50px] px-[20px] bg-[#2074e2] text-white items-center justify-center font-semibold rounded gap-[8px]">
+    <a href="{{ asset('/') }}" class="inline-flex h-[50px] px-[20px] bg-[#2074e2] text-white items-center justify-center font-semibold rounded gap-[8px]">
       <img src="{{ asset('images/homeFill.svg') }}" alt="홈으로" class="w-[20px] h-[20px] brightness-0 invert" />
       <span>메인으로 돌아가기</span>
     </a>

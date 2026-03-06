@@ -35,5 +35,5 @@
 
 {{-- ===== 선택 완료 버튼 ===== --}}
 <div class="px-[20px] pb-[24px]">
-  <button class="w-full btn-primary" onclick="location.href='../card-payment'">선택 완료</button>
+  <button class="w-full btn-primary" onclick="location.href='card-payment'">선택 완료</button>
 </div>

@@ -87,5 +87,5 @@
 
 {{-- ===== 결제하기 버튼 ===== --}}
 <div class="px-[20px] pb-[24px]">
-  <button class="w-full btn-primary" onclick="location.href='../invite-code'">결제하기</button>
+  <button class="w-full btn-primary" onclick="location.href='invite-code'">결제하기</button>
 </div>
